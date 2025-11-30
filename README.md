@@ -1,82 +1,95 @@
-Heart Disease Prediction Using Machine Learning
-📌 Project Overview
+📌 README.md – Heart Disease Prediction Using Machine Learning
+❤️ Heart Disease Prediction Using Machine Learning
 
-Heart disease is one of the leading causes of death worldwide. Early detection and prediction can help in taking preventive measures.
-This project uses machine learning classification models to predict whether a patient is likely to have heart disease based on clinical attributes such as age, blood pressure, cholesterol, chest pain type, etc.
+This project aims to predict the likelihood of heart disease in patients using multiple Machine Learning classification models. It uses a structured dataset containing patient health attributes such as age, cholesterol levels, chest-pain type, resting blood pressure, and more.
+The goal is to provide a data-driven decision support system for early detection of heart disease.
 
-The model is trained on a structured dataset and evaluated using multiple ML techniques to find the best-performing algorithm.
+🚀 Features
 
-🎯 Objectives
-
-Analyze heart disease dataset and perform preprocessing
-Train multiple machine learning models
-Evaluate and compare model performance
-Build a final predictive model
-Provide insights using visualizations
-
-🧠 Machine Learning Models Used
-
+Data preprocessing and cleaning
+Exploratory Data Analysis (EDA)
+Implementation of multiple ML models:
 Logistic Regression
-K-Nearest Neighbors (KNN)
-Support Vector Machine (SVM)
-Random Forest
+Random Forest Classifier
+Neural Network (MLP Classifier)
 Decision Tree
-Naive Bayes
-Gradient Boosting / XGBoost (if used)
+KNN
+Model comparison based on accuracy, precision, recall, and F1-score
+Final deployed model saved as .pkl
+Jupyter Notebook workflow
+CSV dataset included
 
 📂 Project Structure
-📁 Heart_Disease_Prediction
-│── Heart_Disease_Prediction.ipynb
-│── dataset.csv
-│── README.md
-│── /images (optional graphs)
+Heart-Disease-Prediction/
+│
+├── Heart_Disease_Prediction_Using_Machine_Learning.ipynb
+├── heart.csv
+├── random_forest_model.pkl
+├── neural_network_model.pkl
+├── README.md
+└── requirements.txt (optional)
 
-⚙️ Technologies Used
+🧠 Machine Learning Workflow
 
-Python
-NumPy
-Pandas
-Matplotlib / Seaborn
-Scikit-learn
-Google Colab
+Load and clean dataset
+Handle missing values
+Feature scaling & encoding
+Train/Test split
+Train multiple ML models
+Evaluate performance
+Select best model and save with Pickle
 
-📊 Workflow
+📊 Results
 
-Data Loading & Cleaning
-EDA (Exploratory Data Analysis)
-Feature Scaling / Encoding
-Train-Test Split
-Model Training
-Evaluation (Accuracy, Confusion Matrix, F1-score)
-Final Prediction
+The Random Forest and Neural Network models performed with the highest accuracy.
+Final models are exported as .pkl files for deployment.
 
-📈 Results
+🗂️ Dataset
 
-Models were compared based on accuracy and other performance metrics.
-The best-performing model achieved high predictive accuracy, making it suitable for practical prediction tasks.
-(Replace with your model accuracy numbers)
+File: heart.csv
 
-🚀 How to Run
+Contains 303 rows and 14 features related to medical attributes.
 
-Install Python 3.8+
-Install dependencies:
-pip install numpy pandas matplotlib scikit-learn
+Common columns include:
+
+age, sex, cp, trestbps, chol, thalach, ca, thal, target, etc.
+
+🧪 How to Run the Project
+
+Install required libraries:
+pip install numpy pandas scikit-learn matplotlib
+
+Run the Jupyter Notebook:
+
+jupyter notebook
 
 
-Run the notebook:
+Open: Heart_Disease_Prediction_Using_Machine_Learning.ipynb
 
-Google Colab / Jupyter Nookbook
+Run all cells sequentially to train and evaluate models.
 
-Open Heart_Disease_Prediction.ipynb and run all cells.
+📦 Model Deployment
 
-📝 Future Improvements
+The trained models are stored in:
 
-Add a web interface using Flask/Django
-Deploy model using Streamlit or FastAPI
-Improve accuracy with feature engineering
-Use deep learning models
+random_forest_model.pkl
+neural_network_model.pkl
 
-👨‍💻 Author
+These can be imported like:
+
+import pickle
+
+model = pickle.load(open("random_forest_model.pkl", "rb"))
+prediction = model.predict([input_data])
+
+📁 Future Improvements
+
+Build a web interface using Flask
+Add API endpoint
+Improve model accuracy using hyperparameter tuning
+Implement cross-validation
+
+👤 Author
 
 Rajan Pandit
-Machine Learning Enthusiast | Student
+Machine Learning & Data Science Enthusiast
